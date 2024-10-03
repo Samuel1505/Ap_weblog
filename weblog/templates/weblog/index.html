@@ -1,0 +1,24 @@
+<h1 > Welcome to  weblog </h1>
+
+<p>
+  Click on the addpost link to add your details to the blog
+</p>
+
+<a href="{% url "new_post" %} "> Add post </a>
+
+{% for weblog in object_list %}
+<div>
+    <a href="{% url "details" weblog.pk %}">
+  <h2> 
+     {{weblog}}
+  </h2>
+  {% comment %} <p> {{post.author}}</p> {% endcomment %}
+</div>
+{% endfor %}
+
+{% comment %}  {% endcomment %}
+{% comment %} 
+    {% for post in all_post %}
+        <li> {{post}} </li>
+        {% endfor %} 
+    </ul> {% endcomment %}

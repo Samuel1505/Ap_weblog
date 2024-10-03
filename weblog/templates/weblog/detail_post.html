@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details post webpage</title>
+</head>
+<body>
+    
+<h1> details post </h1>
+<h3> Firstname:{{object.Firstname}} </h3>
+<h3> Lastname:{{object.Lastname}} </h3>
+<h3> Gender:{{object.Gender}} </h3>
+<h3> Date of Birth:{{object.Date_of_birth}} </h3>
+<h3> E-mail address:{{object.email}} </h3>
+<h3> Phone Number:{{object.phone_number}} </h3>
+<h3> Matric number:{{object.Matric_number}} </h3>
+<a href="{% url "home" %} ">  go to home </a>
+<br>
+<a href="{% url "update" object.pk %}">  Update </a>
+<br>
+<a href="{% url "delete" object.pk %}">  Delete </a>
+</body>
+</html>
